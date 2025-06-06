@@ -32,7 +32,7 @@ const App = () => {
     const counterValue = localStorage.getItem("counterValue");
     const parsedValue = parseInt(counterValue);
     if (parsedValue) {
-      setState(paresedvalue);
+      setState(parsedValue);
     }
   }, []);
   return (
@@ -68,7 +68,9 @@ const App = () => {
           <button className="outline" onClick={reset}>
             Reset
           </button>
-          <button className="contract " onClick={save}>save</button>
+          <button className="contract " onClick={save}>
+            save
+          </button>
         </div>
       </section>
     </main>
