@@ -1,4 +1,16 @@
+import React, { useState } from "react";
 const App = () => {
+  const [state, setState] = useState(0);
+  console.log(state);
+
+  const substract = () => {
+    if(state>0)
+    setState(state - 1);
+  };
+  const addition = () => {
+    if(state<10)
+    setState(state + 1);
+  };
   return (
     <main className="container" style={{ marginTop: 80 }}>
       <header style={{ textAlign: "center" }}>
@@ -13,12 +25,14 @@ const App = () => {
             margin: "2rem 0",
           }}
         >
-          4
+          {state}
         </div>
 
         <div className="grid">
-          <button className="secondary">- Subtract</button>
-          <button>+ Add</button>
+          <button className="secondary" onClick={substract}>
+            - Subtract
+          </button>
+          <button onClick={addition}>+ Add</button>
         </div>
       </section>
     </main>
