@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 const App = () => {
   const [state, setState] = useState(0);
-  console.log(state);
 
   const substract = () => {
-    if(state>0)
-    setState(state - 1);
+    if (state > 0) {
+      setState((prev) => prev - 2);
+    }
   };
   const addition = () => {
-    if(state<10)
-    setState(state + 1);
+    if (state < 10) {
+      setState((prev) => prev + 2);
+    }
   };
   return (
     <main className="container" style={{ marginTop: 80 }}>
